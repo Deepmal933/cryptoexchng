@@ -1,0 +1,9 @@
+.account .card {
+    margin: 15px 0;
+}
+.account h1{
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}

@@ -1,0 +1,146 @@
+body {
+  background-color: #faf8f8;
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+body,
+button,
+th,
+tr,
+table {
+  font-size: 12px;
+}
+
+.App {
+  padding-top: 80px;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #0091ff;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1024px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.light .card {
+  background: #fff;
+  border: 1px solid #D8D9E3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-table {
+  padding: 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.card-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card-table tr {
+  width: 100%;
+}
+
+.card-table table tr:hover {
+  background-color: #fff0f2;
+}
+
+.card-table tr:first-child,
+.card-table tr:last-child {
+  border-bottom: none;
+}
+
+.light .card-table tr {
+  border-bottom: 1px solid #ebecf3;
+}
+
+.card-table tr th:first-child,
+.card-table tr td:first-child {
+  padding-left: 15px;
+}
+
+.card-table tr th:last-child,
+.card-table tr td:last-child {
+  padding-right: 15px;
+}
+
+.light .card-table th {
+  color: #787ea1;
+  font-size: 11px;
+  padding: 10px 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  text-align: left;
+  font-weight: 500;
+}
+
+.card-table td {
+  padding: 15px 5px;
+  max-width: 100%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.light .card-header {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #cccfe0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .card-table table {
+    width: 100%;
+    display: block;
+    height: 200px;
+    overflow: auto;
+    border-collapse: collapse;
+  }
+}
+/*# sourceMappingURL=index.css.map */
