@@ -26,7 +26,7 @@ select:focus {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1024px;
+  max-width: 1100px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -315,7 +315,7 @@ select:focus {
 }
 
 .light .btn-primary {
-  background: rgb(69, 5, 17);
+  background: #DD2D4C;
   color: #FFF;
   padding: 7px 15px;
   border: none;
@@ -332,9 +332,9 @@ select:focus {
 }
 
 .btn-line.red {
-  border: 1px solid rgb(70, 8, 19);
+  border: 1px solid #DD2D4C;
   background-color: #FDF3F4;
-  color: rgb(60, 6, 16);
+  color: #DD2D4C;
   cursor: pointer;
   font-size: 14px;
   outline: none;
@@ -437,12 +437,12 @@ select:focus {
 }
 
 input:checked + .slider {
-  background-color: rgb(69, 9, 20);
+  background-color: #DD2D4C;
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px rgb(50, 6, 14);
-          box-shadow: 0 0 1px rgb(87, 8, 23);
+  -webkit-box-shadow: 0 0 1px #DD2D4C;
+          box-shadow: 0 0 1px #DD2D4C;
 }
 
 input:checked + .slider:before {
@@ -608,13 +608,13 @@ input::-ms-input-placeholder {
 
 /* On mouse-over, add a grey background color */
 .input-check:hover input ~ .checkmark {
-  border-color: rgb(69, 6, 18);
+  border-color: #DD2D4C;
 }
 
 /* When the checkbox is checked, add a blue background */
 .input-check input:checked ~ .checkmark {
-  background-color: rgb(79, 11, 23);
-  border-color: rgb(91, 14, 28);
+  background-color: #DD2D4C;
+  border-color: #DD2D4C;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
