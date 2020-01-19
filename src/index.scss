@@ -10,6 +10,7 @@ body {
   font-family: Inter;
 }
 
+body,input,textarea,button{}
 body,
 button,
 th,
@@ -31,7 +32,7 @@ select:focus {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1024px;
+  max-width: 1100px;
   padding-right: 10px;
   padding-left: 10px;
 }
