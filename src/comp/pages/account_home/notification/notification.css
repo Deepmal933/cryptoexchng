@@ -1,0 +1,8 @@
+.card.notification{
+    background: #EAEDF1;
+    border: none;
+}
+
+.card.notification .subtitle{
+    color:#33385D;
+}

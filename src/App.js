@@ -9,8 +9,10 @@ import {
 } from "react-router-dom";
 import Navbar from './comp/common/navbar/navbar';
 import Market from './comp/pages/market/market';
-import Account from './comp/pages/account/account/Account'
-import Security from './comp/pages/account/security/security';
+import Account from './comp/pages/account_home/account/Account'
+import Security from './comp/pages/account_home/security/security';
+import AccountHome from './comp/pages/account_home/account_home'
+import DeviceMng from './comp/pages/account_home/security/devicemng/devicemng'
 
 function App() {
   return (
@@ -21,11 +23,11 @@ function App() {
         <Route path="/market" component={Market}>
           <Market/>
         </Route>
-        <Route path="/account" component={Market}>
-          <Account/>
+        <Route path="/account" component={AccountHome}>
+          <AccountHome/>
         </Route>
-        <Route exact path="/security" component={Security}>
-          <Security/>
+        <Route exact path="/security" component={DeviceMng}>
+          <DeviceMng/>
         </Route>
       </Router>
     </div>

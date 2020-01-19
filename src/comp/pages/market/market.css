@@ -6,6 +6,45 @@
   height: 40px;
   border: none;
   outline: none;
-  padding-left: 20px;
   font-size: 16px;
+}
+
+.light .market .search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.light .market .star-icon{
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color:#787D9E;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.light .market .search-icon {
+  width: 50px;
+  height: 100%;
+font-size: 14px;
+color:#787D9E;
+}
+
+.market .market-table table tr td:first-child{
+  width: 10px;
+}
+
+.light .market .star-icon:hover{
+  background: rgba(0,0,0,0.1);
+  color: #FFF;
+}
+
+.light .market td.up{
+  color:#5FB41A;
+}
+
+.light .market td.down{
+  color:#D35053;
 }

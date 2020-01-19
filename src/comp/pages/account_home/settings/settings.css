@@ -1,0 +1,18 @@
+.settings .card-content{
+    padding: 12px 20px !important;
+}
+
+.settings .card-content .setting-icon{
+    padding: 5px 15px 5px 0;
+    font-size: 16px;
+    color:#787D9E;
+}
+
+.settings .card-content .level-left{
+    align-items: center;
+}
+
+.blue-icon{
+    color:#0063FF;
+    font-size: 16px;
+}

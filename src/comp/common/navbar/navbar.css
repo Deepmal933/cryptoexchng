@@ -16,7 +16,7 @@ width: 80px;
 }
 
 nav .nav-content li.logo {
-padding: 12px 0;
+padding: 8px 0;
 }
 
 nav .nav-content li:nth-last-child(2) {
@@ -25,9 +25,9 @@ nav .nav-content li:nth-last-child(2) {
 nav .nav-content li {
   list-style: none;
   display: inline;
-  padding: 20px 0px;
-  margin: 0 15px;
-  font-size: 14px;
+  padding: 15px 0px;
+  margin: 0 10px;
+  font-size: 13px;
 }
 
 nav .nav-content li.right {
@@ -43,6 +43,10 @@ nav .nav-content li.right {
 }
 .menu-icon {
   display: none;
+}
+
+.profile-img{
+
 }
 
 

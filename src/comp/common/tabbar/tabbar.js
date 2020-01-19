@@ -6,7 +6,7 @@ const Tabbar = props => {
       <div className="tabs">
         {
           props.options.map((option,index)=>
-            <li className={index===props.selected?"active":""}>{option}</li>     
+            <li className={index===props.selected?"active":""} onClick={()=>{props.onchange(index)}}>{option}</li>     
             )}
      
       </div>

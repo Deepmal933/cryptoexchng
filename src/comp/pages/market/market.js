@@ -8,11 +8,14 @@ const Market = props => {
       <div className="wrapper market">
         <div className="card">
           <div className="search">
+            <span className="search-icon flex-center">
+            <i class="fas fa-search"></i>
+            </span>
             <input type="text" placeholder="Search coin" />
           </div>
         </div>
         <Tabbar options={["Favorite","Btc Market","TRY Market","ALT Market"]} selected={1}/>
-        <div className="card">
+        <div className="card market-table">
           <div className="card-table">
             <table>
               <tr className="header">
@@ -26,16 +29,16 @@ const Market = props => {
                 <th>CHANGE%</th>
                 <th>VOLUMN</th>
               </tr>
-              {market_data.map(data => (
+              {market_data.map((data,index) => (
                 <tr>
-                  <td></td>
+                  <td><span className="star-icon flex-center"><i class="fas fa-star"></i></span></td>
                   <td>{data.pair}</td>
                   <td>{data.coin}</td>
                   <td>{data.last}</td>
                   <td>{data.high}</td>
                   <td>{data.low}</td>
                   <td>{data.avg}</td>
-                  <td>{data.change}%</td>
+              <td className={index%2 ===0 ? "up":"down"}>{index%2 === 0 ? <i class="fas fa-arrow-up"></i> : <i class="fas fa-arrow-down"></i> }&nbsp;{data.change}%</td>
                   <td>{data.vol}</td>
                 </tr>
               ))}

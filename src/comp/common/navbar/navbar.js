@@ -13,7 +13,7 @@ const Navbar = props => {
               <li className="left">Buy/Sell</li>
               <li className="left">Exchange</li>
               <li className="left">Pro</li>
-              <li className="right">Profile</li>
+              <li className="right"><span className="profile-img">profile</span></li>
             </span>
             <li
               className={mNav ? "right menu-icon close" : "right menu-icon"}

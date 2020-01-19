@@ -24,7 +24,7 @@
   font-weight: 400;
   padding: 7px 15px;
   margin: 0 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .light .tabbar .tabs li.active,
@@ -41,6 +41,8 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
+
 
 @media only screen and (max-device-width: 480px) {
   .tabbar {

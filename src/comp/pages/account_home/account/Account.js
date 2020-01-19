@@ -1,31 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./account.css";
-import Tabbar from "../../../common/tabbar/tabbar";
 import { order_data, recent_activity } from '../../../../data/account_data';
+import Announcement from "./announcement/announcement";
 const Account = props => {
+
+  const [announce,setAnnounce] = useState(false);
+
+  const handleBack = () =>{
+    setAnnounce(false)
+  }
   return (
     <React.Fragment>
-      <div className="wrapper account">
-        <h1>Account</h1>
-        <Tabbar
-          options={[
-            "Account",
-            "Security",
-            "Identification",
-            "Notification",
-            "API"
-          ]}
-          selected={0}
-        />
+      { !announce && 
+      <div className="account">
+      
         <div className="card">
           <div className="card-content">
             <div className="level">
               <div className="level-left ver">
                 <div className="profile">
-                  <div className="subtitle is-4">John doe</div>
+                  <div className="subtitle is-4">John doe &nbsp;<i class="fas fa-check-circle blue-icon"></i></div>
                   <div className="subtext">johndoe@gmail.com</div>
                   <br />
-                  <a className="btn-link">EDIT PROFILE</a>
+                  <a className="btn-link"><i class="fas fa-pen"></i>&nbsp;EDIT PROFILE</a>
                 </div>
               </div>
               <div className="level-right ver">
@@ -35,8 +32,8 @@ const Account = props => {
                 </div>
                 <br />
                 <div>
-                  <button className="btn-line green">Deposit</button>&nbsp;
-                  <button className="btn-line red">Withdraw</button>
+                  <button className="btn-line green"><i class="fas fa-arrow-up"></i>Deposit</button>&nbsp;&nbsp;
+                  <button className="btn-line red"><i class="fas fa-arrow-down"></i>Withdraw</button>
                 </div>
               </div>
             </div>
@@ -129,7 +126,7 @@ const Account = props => {
                     </div>
                   </div>
                   <div className="level-right">
-                    <a className="btn-link">EDIT PROFILE</a>
+                  <a className="btn-link"><i class="fas fa-pen"></i>&nbsp;EDIT</a>
                   </div>
                 </div>
                 <br />
@@ -167,11 +164,15 @@ const Account = props => {
               </div>
             </div>
             <div className="text-right">
-                <a>View All</a>
+                <a onClick={()=>{setAnnounce(true)}}>View All</a>
                 </div>  
           </div>
         </div>
-      </div>
+        </div>
+}
+{
+  announce && <Announcement onback={handleBack}/>
+}
     </React.Fragment>
   );
 };

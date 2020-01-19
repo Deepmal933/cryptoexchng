@@ -15,14 +15,6 @@
     border-left: 1px solid #D8D9E3;
 }
 
-.security .options .card-content{
-    padding: 20px;
-    border-bottom: 1px solid #D8D9E3;
-}
-
-.security .options .card-content:last-child{
-    border-bottom: none;
-}
 
 .security .options .level-right.hor.center .switch{
 margin-left: 10px;

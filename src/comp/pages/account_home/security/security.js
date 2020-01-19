@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./security.css";
-import Tabbar from "../../../common/tabbar/tabbar";
+import DeviceMng from "./devicemng/devicemng";
+import ChangePass from "../../../dialogs/changepass/changepass";
+import GoogleAuth from "../../../dialogs/googleauth/googleauth";
+import SMSAuth from "../../../dialogs/smsauth/smsauth";
+import AntiPhising from "../../../dialogs/antiphishing/antiphising";
 
 const Security = props => {
+
+const [dm,setDM] = useState(false);
+const [googled,setGoogleD] = useState(false);
+const [smsd,setSmsD] = useState(false);
+const [antid,setAntiD] = useState(false);
+const [passd,setPassD] = useState(false);
+const handleBack = () =>{
+  setDM(false);
+}
+
   return (
     <React.Fragment>
-      <div className="wrapper security">
-        <h1>Account</h1>
-        <Tabbar
-          options={[
-            "Account",
-            "Security",
-            "Identification",
-            "Notification",
-            "API"
-          ]}
-          selected={1}
-        />
+      {passd && <ChangePass onclose={()=>{setPassD(false)}}/> }
+      {googled && <GoogleAuth onclose={()=>{setGoogleD(false)}}/> }
+      {smsd && <SMSAuth onclose={()=>{setSmsD(false)}}/>}
+      {antid && <AntiPhising onclose={()=>{setAntiD(false)}}/>}
+
+      {!dm && <div className="security">
         <div className="card">
           <div className="card-content">
             <div className="level middle">
@@ -60,7 +68,7 @@ const Security = props => {
                   </div>
                   <div className="level-right ver">
                   <label class="switch">
-  <input type="checkbox"/>
+  <input type="checkbox" onChange={()=>{setGoogleD(true)}}/>
   <span class="slider round"></span>
               </label>
                   </div>
@@ -85,7 +93,7 @@ const Security = props => {
                   </div>
                   <div className="level-right ver">
                   <label class="switch">
-  <input type="checkbox"/>
+  <input type="checkbox" onChange={()=>{setSmsD(true)}}/>
   <span class="slider round"></span>
               </label>
                   </div>
@@ -138,7 +146,7 @@ const Security = props => {
                     </div>
                   </div>
                   <div className="level-right ver">
-                  <button className="btn-line red">
+                  <button className="btn-line red" onClick={()=>{setPassD(true)}}>
                       Change
                   </button>
                   </div>
@@ -160,7 +168,7 @@ const Security = props => {
                     </div>
                   </div>
                   <div className="level-right ver">
-                  <button className="btn-line red">
+                  <button className="btn-line red" onClick={()=>{setAntiD(true)}}>
                       Create
                   </button>
                   </div>
@@ -209,14 +217,15 @@ const Security = props => {
                     </div>
                   </div>
                   <div className="level-right ver">
-                  <button className="btn-line green">
+                  <button className="btn-line green" onClick={()=>{setDM(true)}}>
                       Manage
                   </button>
                   </div>
                 </div>
             </div>
         </div>
-      </div>
+        </div>}
+        {dm&&<DeviceMng onback={handleBack}/>}
     </React.Fragment>
   );
 };

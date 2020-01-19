@@ -1,0 +1,60 @@
+.identification .label-red{
+    color:#E26163;
+    font-size: 12px;
+    display: block;
+    padding-left: 15px;
+}
+
+.identification .verify-notes{
+    background: #EDEEF5;
+    border-radius: 4px;
+}
+.identification .verify-notes .col.is-3{
+    box-sizing: border-box;
+}
+
+.identification .verify-notes .col.is-3:nth-child(2){
+    background-size: 100% 110% !important;
+    background-position: center !important;
+    width: 40% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-repeat: no-repeat !important;
+}
+.identification .verify-notes .col.is-3:first-child,.identification .verify-notes.col.is-3:last-child{
+    width: 30% !important;
+}
+
+.identification .verify-notes .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    padding: 7px;
+    min-width: 10px;
+    font-weight: 600;
+    height: 10px;
+    border-radius: 50%;
+    background: #787D9E;
+    margin-right: 10px;
+}
+.identification .verify-notes .col.is-3:nth-child(2) .level{
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.identification .verify-notes .level{
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.identification .verify-notes .level .subtitle{
+    margin-bottom: 5px;
+}
+
+.identification .iden{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
